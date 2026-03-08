@@ -7,7 +7,7 @@ function App() {
     <div className="flex flex-col justify-center items-center m-4 p-4">
       <Accordion />
       <RandomColorGenerator />
-      <StarSelector />
+      <StarSelector numStars={10} />
     </div>
   );
 }

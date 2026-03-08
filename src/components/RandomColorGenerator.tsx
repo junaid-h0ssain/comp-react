@@ -10,24 +10,22 @@ export default function RandomColorGenerator() {
       // eslint-disable-next-line react-hooks/purity
       color += letters[Math.floor(Math.random() * 16)];
     }
-    console.log(color);
     return color;
   }
 
   const [color, setColor] = React.useState<string>(generateRandomColor());
-  const randomColor = color;
 
   return (
     <div className="flex flex-col text-center justify-center w-2xl m-4 p-4">
         <style>
           {`
             body{
-                 background-color: ${randomColor};
+                 background-color: ${color};
             }
           `}
         </style>
       <h1 className="font-mono font-extrabold text-3xl mb-3">Random Color Generator</h1>
-      <button onClick={() => setColor(generateRandomColor())} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <button onClick={() => setColor(generateRandomColor())} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-auto rounded">
         Generate Color
       </button>
     </div>

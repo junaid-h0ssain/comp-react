@@ -6,7 +6,7 @@ function App() {
  
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen m-4 p-4">
+    <div className="flex flex-col justify-center items-center m-4 p-4">
       <Accordion />
       <RandomColorGenerator />
     </div>

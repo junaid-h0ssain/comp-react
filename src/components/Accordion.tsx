@@ -1,3 +1,5 @@
+import React from "react";
+
 const data = [
   {
     id: "1",
@@ -26,12 +28,24 @@ const data = [
 ];
 
 export default function Accordion() {
+
+  const [selected, setSelected] = React.useState<string | null>(null);
+
+  function toggle(id: string) {
+    if (selected === id) {
+      setSelected(null);
+    } else {
+      setSelected(id);
+    }
+    console.log(selected);
+  }
+
   return (
-    <div>
+    <div className="flex flex-col text-center justify-center w-2xl m-4 p-4">
       {data.map((item) => (
-        <div key={item.id}>
+        <div onClick={() => toggle(item.id)} key={item.id} className="flex flex-col m-4 p-4 border-2 border-gray-300 rounded">
           <h3>{item.question}</h3>
-          <p>{item.answer}</p>
+          {selected === item.id && <p>{item.answer}</p>}
         </div>
       ))}
     </div>

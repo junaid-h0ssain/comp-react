@@ -18,7 +18,7 @@ export default function LoadMore() {
       setLoading(true);
       const response = await fetch(
         `https://dummyjson.com/products?limit=4&skip=${
-          count * 10
+          count * 4
         }`
       );
 

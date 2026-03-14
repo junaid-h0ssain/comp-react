@@ -6,7 +6,7 @@ import StarSelector from "./components/StarSelector";
 
 function App() {
   return (
-    <div className="flex flex-col justify-center items-center m-4 p-4 gap-12 bg-[#fdfaf1]">
+    <div className="flex flex-col justify-center items-center m-4 p-4 gap-12">
       <Accordion />
       <RandomColorGenerator />
       <StarSelector numStars={10} />

@@ -9,7 +9,7 @@ function App() {
       <Accordion />
       <RandomColorGenerator />
       <StarSelector numStars={10} />
-      <ImageSlider urls={"https://picsum.photos/v2/list?page=2&limit=100"} />
+      <ImageSlider urls={"https://picsum.photos/v2/list?page=3&limit=100"} />
     </div>
   );
 }

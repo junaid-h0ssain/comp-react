@@ -46,16 +46,16 @@ export default function ImageSlider({ urls }: { urls: string }) {
 
   return (
     <div className="flex flex-row items-center justify-center w-2xl m-4 p-4">
-        <div onClick={() => setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))} className="flex items-center justify-center mr-5">
+        <button onClick={() => setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))} className="flex items-center justify-center mr-5">
             <BsArrowLeftCircleFill size={50}/>
-        </div>
+        </button>
         <div className="flex flex-col items-center justify-center">
             {images.length > 0 && <img src={images[currentIndex].download_url} alt={images[currentIndex].author} className="h-96 object-cover rounded-lg" />}
             <div className="flex ">{images.length > 0 && <p className="flex items-end mt-2 text-2xl text-gray-900">{images[currentIndex].id}</p>}</div>
         </div>
-        <div onClick={() => setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))} className="flex items-center justify-center ml-5">
+        <button onClick={() => setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))} className="flex items-center justify-center ml-5">
             <BsArrowRightCircleFill size={50}/>
-        </div>
+        </button>
     </div>
   )
 }

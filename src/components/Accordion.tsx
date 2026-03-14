@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 const data = [
   {
@@ -28,7 +28,7 @@ const data = [
 ];
 
 export default function Accordion() {
-  const [selected, setSelected] = React.useState<string | null>(null);
+  const [selected, setSelected] = useState<string | null>(null);
 
   function toggle(id: string) {
     if (selected === id) {

@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 export default function RandomColorGenerator() {
   function generateRandomColor() {
@@ -11,7 +11,7 @@ export default function RandomColorGenerator() {
     return color;
   }
 
-  const [color, setColor] = React.useState<string>(generateRandomColor());
+  const [color, setColor] = useState<string>(generateRandomColor());
 
   return (
     <div className="flex flex-col text-center justify-center w-2xl m-4 p-4">

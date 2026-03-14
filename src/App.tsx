@@ -1,4 +1,5 @@
 import Accordion from "./components/Accordion";
+import ImageSlider from "./components/ImageSlider";
 import RandomColorGenerator from "./components/RandomColorGenerator";
 import StarSelector from "./components/StarSelector";
 
@@ -8,6 +9,7 @@ function App() {
       <Accordion />
       <RandomColorGenerator />
       <StarSelector numStars={10} />
+      <ImageSlider urls={"https://picsum.photos/v2/list?page=2&limit=100"} />
     </div>
   );
 }

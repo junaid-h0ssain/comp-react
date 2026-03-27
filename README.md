@@ -1,75 +1,75 @@
-# React + TypeScript + Vite
+# React Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React component library built with TypeScript and Vite. Features a collection of reusable UI components with Tailwind CSS styling for a clean, professional look.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 with TypeScript support
+- Vite for fast development and optimized builds
+- Tailwind CSS for responsive styling
+- Type-safe components
+- React Icons integration for scalable icons
+- ES Lint and Prettier for code quality
 
-## React Compiler
+## Components
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+The project includes the following reusable components:
 
-Note: This will impact Vite dev & build performances.
+- **Accordion**: Expandable FAQ or content sections with toggle functionality
+- **ImageSlider**: Image carousel component that fetches and displays images from an API
+- **LoadMore**: Infinite scroll/load more component for displaying paginated content
+- **RandomColorGenerator**: Generates and displays random colors
+- **StarSelector**: Interactive star rating component
 
-## Expanding the ESLint configuration
+## Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+# or
+bun install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+This will start the Vite development server with Hot Module Replacement (HMR).
+
+### Build
+
+```bash
+npm run build
+```
+
+Compiles TypeScript and builds the project for production.
+
+### Linting and Formatting
+
+```bash
+npm run lint        # Check for linting errors
+npm run format      # Format code with Prettier
+npm run format:check # Check formatting without modifying
+```
+
+## Deployment
+
+The project is configured for deployment to Cloudflare using Wrangler.
+
+```bash
+npm run preview    # Build and preview locally
+npm run deploy     # Deploy to Cloudflare
+```
+
+## Technologies
+
+- **React**: UI library
+- **TypeScript**: Type safety
+- **Vite**: Build tool and dev server
+- **Tailwind CSS**: Utility-first CSS framework
+- **React Icons**: Icon library
+- **Wrangler**: Cloudflare CLI
+- **ESLint & Prettier**: Code quality and formatting
